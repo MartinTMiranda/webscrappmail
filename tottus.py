@@ -63,9 +63,9 @@ for url in urls_:
         if i != '1':
             print(url+"?page={}&store=tottus".format(i))
             if 'falabella-pe' in url:
-                response = requests.get(url+"?page={i}")
+                response = requests.get(url+"?page={}".format(i))
             else:
-                response = requests.get(url+"?page={i}&store=tottus")
+                response = requests.get(url+"?page={}&store=tottus".format(i))
             #print(response)
             soup = BeautifulSoup(response.content, "html.parser")
         
