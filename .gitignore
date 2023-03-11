@@ -6,6 +6,7 @@ config.json
 
 # ignore all files in a specific directory
 #my_directory/
+.ipynb_checkpoints/
 
 # ignore all files with a certain extension in a specific directory
 #my_directory/*.log
