@@ -68,7 +68,7 @@ message.attach(MIMEText(body, 'plain'))
 #message.attach(table_attachment)
 
 # attach the files to the email
-file_names = ['products_tottus.csv', 'dataset3.csv']
+file_names = ['products_tottus.csv', 'dataset3.csv','products_saga.csv']
 for file_name in file_names:
     with open(file_name, "rb") as f:
         attach = MIMEApplication(f.read(), _subtype=os.path.splitext(file_name)[1][1:])
