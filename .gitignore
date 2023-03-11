@@ -1,0 +1,11 @@
+# ignore all .txt files
+*.csv
+
+# ignore a specific file
+config.json
+
+# ignore all files in a specific directory
+#my_directory/
+
+# ignore all files with a certain extension in a specific directory
+#my_directory/*.log
