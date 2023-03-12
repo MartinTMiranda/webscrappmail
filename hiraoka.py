@@ -112,5 +112,5 @@ for url_ in urls:
             list_urls.append(link)
 
 df = pd.DataFrame({'Product Name':products,'Price_finalPrice':prices_fp,'Price_OldPrice':prices_op, 'Discount':discounts, 'Url_product':list_urls})
-df = df.query("`Discount` >= 60").sort_values("Discount", ascending=False)
+df = df.query("`Discount` >= 50").sort_values("Discount", ascending=False)
 df.to_csv('products_hk.csv', sep=';', index=False, encoding='utf-8') #,quotechar='"',quoting=csv.QUOTE_NONNUMERIC)

@@ -147,6 +147,6 @@ for url in urls_:
             list_name.append(name)
 
 df = pd.DataFrame({'Product Name':list_name,'Price_cmr':list_pricecmr,'Price_offer':list_priceoffer,'Price_normal':list_pricenormal, 'Discount':list_discount, 'links':list_urls})
-df = df.query("`Discount` >= 60").sort_values("Discount", ascending=False)
+df = df.query("`Discount` >= 50").sort_values("Discount", ascending=False)
 df = df.drop_duplicates()
 df.to_csv('products_tottus.csv', sep=',', index=False, encoding='utf-8')
