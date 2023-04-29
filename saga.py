@@ -84,9 +84,10 @@ for url in urls_:
                 soup = BeautifulSoup(response.content, "html.parser")
 
             #lista de productos a scrappear
-            clase = soup.find_all("div",class_="jsx-4099777552 search-results--products")[0].findAll("div")[0]["class"]
+            code_class = soup.find("div", attrs={"id":"testId-searchResults-products"})["class"][0]
+            clase = soup.find_all("div",class_="{} search-results--products".format(code_class))[0].findAll("div")[0]["class"]
             clase_ = clase[0]+" "+clase[1]+" "+clase[2]
-            lista_ = soup.find_all("div",class_="jsx-4099777552 search-results--products")[0].find_all("div",class_=clase_)
+            lista_ = soup.find_all("div",class_="{} search-results--products".format(code_class))[0].find_all("div",class_=clase_)
             #the old version
             #lista_ = soup.find_all("div",class_="jsx-4099777552 search-results--products")[0].find_all("div",class_="jsx-1327784995 jsx-97019337 pod pod-4_GRID")
 
