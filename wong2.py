@@ -68,6 +68,7 @@ for urls__ in urls_page:
         #break
     
 df = pd.DataFrame({'Product Name':products,'Price_finalPrice':prices_fp,'Price_OldPrice':prices_op, 'Discount':discounts, 'Url_product':urls_name})
+df.to_csv('products_wong_all.csv', sep=';' ,index=False, encoding='utf-8')
 df = df.query("`Price_OldPrice` <= 1000").sort_values(by='Price_OldPrice', ascending=True)
 df.to_csv('products_wong.csv', sep=';' ,index=False, encoding='utf-8') #,quotechar='"',quoting=csv.QUOTE_NONNUMERIC)
 print('finish')
