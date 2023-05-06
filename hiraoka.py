@@ -40,7 +40,7 @@ list_urls=[] #List to store urls of the product
 #html = soup.prettify()
 
 #function
-def stringtofloat(texto):
+def string_to_float(texto):
     start = texto.find('S/') + 3
     end = len(texto)
     texto = texto[start:end]
@@ -101,7 +101,7 @@ for url_ in urls:
             link = a.find('a',attrs={'class':'product-item-link'})['href']
             try:
                 price_op=a.find('span',attrs={'class':'old-price'}).find('span',attrs={'data-price-type':'oldPrice'}).text
-                discount=round((1-stringtofloat(price_fp)/stringtofloat(price_op))*100)
+                discount=round((1-string_to_float(price_fp)/string_to_float(price_op))*100)
             except:
                 price_op = ''
                 discount = 0
