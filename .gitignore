@@ -10,3 +10,6 @@ config.json
 
 # ignore all files with a certain extension in a specific directory
 #my_directory/*.log
+.vscode/
+ipynb_checkpoints
+__pycache__
